@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f7f3;
+    color: #183c2c;
+}
+
+header {
+    background: #075c40;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.welcome {
+    background: #0c7652;
+    color: white;
+    margin: 25px auto;
+    padding: 35px 15px;
+    width: 90%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.welcome h2 {
+    color: #f5d98c;
+    margin-bottom: 15px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+}
+
+.card {
+    background: white;
+    padding: 25px 10px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 3px 10px #00000012;
+    cursor: pointer;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.tasbeeh {
+    background: white;
+    margin: 20px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.tasbeeh h1 {
+    font-size: 50px;
+    margin: 15px;
+}
+
+button {
+    background: #075c40;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #075c40;
+    color: white;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .card {
+        padding: 25px;
+        min-height: 100px;
+    }
+
+    .tasbeeh {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .tasbeeh h1 {
+        font-size: 40px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}

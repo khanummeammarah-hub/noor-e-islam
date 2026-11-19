@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor-e-Islam
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#063b2c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="style.css"></title>
+</head>
+<body>
+
+    <header>
+        <h1>☪ Noor-e-Islam</h1>
+        <p>Assalamu Alaikum</p>
+    </header>
+
+    <section class="welcome">
+        <h2>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h2>
+        <p>Welcome to Noor-e-Islam</p>
+        <p>Your Daily Islamic Companion</p>
+    </section>
+
+    <section class="features">
+        <div class="card" onclick="showMessage('Quran Shareef')">
+            📖
+            <h3>Quran Shareef</h3>
+        </div>
+
+       <div class="card" onclick="showNamaz()">
+    🕌
+    <h3>Namaz Timings</h3>
+</div>
+
+       <div class="card" onclick="showDuas()">
+    🙌
+    <h3>Daily Duas</h3>
+</div>
+        <div class="card" onclick="showHadith()">
+    📜
+    <h3>Hadith</h3>
+</div>
+
+        <div class="card" onclick="showCalendar()">
+    🌙
+    <h3>Islamic Calendar</h3>
+</div>
+
+        let tasbeehCount = 0;
+let tasbeehTarget = 33;
+
+function openTasbeeh() {
+    let box = document.createElement("div");
+
+    box.style.cssText = `
+        position:fixed;
+        inset:5%;
+        background:white;
+        color:#075c40;
+        padding:20px;
+        border-radius:20px;
+        z-index:9999;
+        text-align:center;
+        overflow-y:auto;
+    `;
+
+    box.innerHTML = `
+        <button id="closeTasbeeh">✖ Close</button>
+
+        <h2>📿 Digital Tasbeeh</h2>
+        <p>Choose your target</p>
+
+        <button onclick="setTarget(33)">33</button>
+        <button onclick="setTarget(99)">99</button>
+        <button onclick="setTarget(100)">100</button>
+
+        <h1 id="tasbeehCount"
+            style="font-size:65px;margin:25px;">
+            ${tasbeehCount}
+        </h1>
+
+        <p id="tasbeehProgress">
+            ${tasbeehCount} / ${tasbeehTarget}
+        </p>
+
+        <div style="
+            background:#ddd;
+            height:15px;
+            border-radius:20px;
+            overflow:hidden;
+        ">
+            <div id="tasbeehBar" style="
+                width:${Math.min(100,tasbeehCount/tasbeehTarget*100)}%;
+                height:100%;
+                background:#075c40;
+            "></div>
+        </div>
+
+        <br>
+
+        <button id="countTasbeeh"
+            style="font-size:22px;padding:20px 35px;">
+            📿 Count +
+        </button>
+
+        <br><br>
+
+        <button id="resetTasbeeh">Reset</button>
+
+        <h3 id="tasbeehMessage">
+            <div class="card" onclick="openTasbeeh()">
+    📿
+    <h3>Digital Tasbeeh</h3>
+</div>
+}
+    </section>
+
+    <section class="tasbeeh" id="tasbeeh">
+        <h2>Digital Tasbeeh</h2>
+        <h1 id="count">0</h1>
+        <button onclick="increaseCount()">Count +</button>
+        <button onclick="resetCount()">Reset</button>
+    </section>
+
+    <footer>
+    <p>© 2026 Noor-e-Islam</p>
+    <p>Developed By: Umme Ammarah Khan</p>
+</footer>
+    <footer>
+    <p>© 2026 Noor-e-Islam</p>
+    <p>Developed By: Umme Ammarah Khan</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
